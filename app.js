@@ -17,13 +17,32 @@ function safeText(str) {
 
 function buildSocialLinks(links, mount) {
   mount.innerHTML = "";
+
   for (const link of links || []) {
+    const label = (link.label || "").toLowerCase();
+
+    // ожидаем label: "Telegram", "Instagram", etc.
     const a = el("a", {
-      class: "pill",
+      class: `pill social-btn social-${label}`,
       href: link.url,
       target: "_blank",
-      rel: "noopener noreferrer"
-    }, [document.createTextNode(safeText(link.label))]);
+      rel: "noopener noreferrer",
+      "aria-label": link.label
+    }, [
+      // icon (SVG via CSS background)
+      el("span", {
+        class: "icon",
+        "aria-hidden": "true"
+      }),
+
+      // text (hidden on mobile via CSS)
+      el("span", {
+        class: "text"
+      }, [
+        document.createTextNode(link.label)
+      ])
+    ]);
+
     mount.append(a);
   }
 }
@@ -248,3 +267,4 @@ main().catch((err) => {
     </div>
   `;
 });
+

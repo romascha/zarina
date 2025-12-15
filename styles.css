@@ -455,11 +455,11 @@ html { overflow-x: hidden; }
 
 /* PNG icons */
 .social-telegram .icon {
-  background-image: url("./assets/telegram_icon.png");
+  background-image: url("./telegram_icon.png");
 }
 
 .social-instagram .icon {
-  background-image: url("./assets/instagram_icon.png");
+  background-image: url("./instagram_icon.png");
 }
 
 /* desktop: icon + text */
@@ -482,5 +482,6 @@ html { overflow-x: hidden; }
     height: 34px;
   }
 }
+
 
 

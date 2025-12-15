@@ -1,0 +1,52 @@
+{
+  "profile": {
+    "name": "Зарина Арчакова",
+    "title": "Студентка / Комсомолка / Спортсменка / Просто красавица",
+    "about": "Коротко о себе: чем занимаешься, что любишь делать, на чём специализируешься. 2–4 предложения — достаточно.",
+    "photo": "https://yt3.googleusercontent.com/ytc/AIdro_kAr0K8u9CyuHrz8GqyzUVEDStVYbQUpCajq_gek2Rref6w=s900-c-k-c0x00ffffff-no-rj",
+    "links": [
+      { "label": "Instagram", "url": "https://www.instagram.com/zarina_archakova", "style": "pill" },
+      { "label": "Telegram", "url": "https://t.me/Zarina_Archakova", "style": "pill" }
+    ],
+    "cta": [
+      { "label": "Написать", "url": "mailto:you@example.com" },
+      { "label": "YouTube", "url": "https://www.youtube.com/@zarina_archakova" }
+    ]
+  },
+  "photos": [
+  {
+    "thumb": "https://kvitkapolonyny.com/wp-content/uploads/2018/03/Dlia-alboma-663x1024.jpg",
+    "src": "https://kvitkapolonyny.com/wp-content/uploads/2018/03/Dlia-alboma-663x1024.jpg"
+  },
+  {
+    "thumb": "https://i.ytimg.com/vi/DSOIZOQbaIA/sddefault.jpg",
+    "src": "https://i.ytimg.com/vi/DSOIZOQbaIA/sddefault.jpg"
+  },
+  {
+    "thumb": "https://i.ytimg.com/vi/4wHgwsoN3cU/hqdefault.jpg?sqp=-oaymwEmCOADEOgC8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGGUgRihCMA8=&rs=AOn4CLCEPXRIQTYdlCIUId6-4mTDL-tvZw",
+    "src": "https://i.ytimg.com/vi/4wHgwsoN3cU/hqdefault.jpg?sqp=-oaymwEmCOADEOgC8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGGUgRihCMA8=&rs=AOn4CLCEPXRIQTYdlCIUId6-4mTDL-tvZw"
+  }
+  ],
+  "videos": [
+    {
+		"youtubeId": "JLjHvZlI24k",
+		"caption": "Видео 1 (YouTube)"
+    },
+	{
+		"youtubeId": "aq4mcE_KWv0",
+		"caption": "Видео 2 (YouTube)"
+    },
+	{
+		"youtubeId": "dQw4w9WgXcQ",
+		"caption": "Видео 3 (YouTube)"
+    },
+    {
+		"youtubeId": "aqz-KE-bpKQ",
+		"caption": "Видео 4 (YouTube)"
+    },	
+    {
+		"youtubeId": "9bZkp7q19f0",
+		"caption": "PSY – Gangnam Style"
+	}	
+  ]
+}

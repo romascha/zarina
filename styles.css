@@ -1,0 +1,431 @@
+:root{
+  --bg: #0b0e14;
+  --card: rgba(255,255,255,0.06);
+  --card2: rgba(255,255,255,0.08);
+  --text: rgba(255,255,255,0.92);
+  --muted: rgba(255,255,255,0.65);
+  --line: rgba(255,255,255,0.10);
+  --accent: #9ad7ff;
+  --shadow: 0 18px 50px rgba(0,0,0,0.45);
+  --r: 18px;
+}
+
+*{ box-sizing: border-box; }
+html,body{ height: 100%; }
+body{
+  margin: 0;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Noto Sans", "Helvetica Neue", sans-serif;
+  background:
+    radial-gradient(1200px 700px at 15% 10%, rgba(154,215,255,0.18), transparent 55%),
+    radial-gradient(900px 600px at 85% 30%, rgba(180,255,200,0.10), transparent 60%),
+    var(--bg);
+  color: var(--text);
+}
+
+a{ color: inherit; text-decoration: none; }
+
+.topbar{
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  padding: 18px 22px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  backdrop-filter: blur(12px);
+  background: rgba(11,14,20,0.55);
+  border-bottom: 1px solid var(--line);
+}
+
+.brand{
+  font-weight: 700;
+  letter-spacing: 0.2px;
+  color: var(--text);
+}
+
+.social{
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.pill{
+  display: inline-flex;
+  gap: 8px;
+  align-items: center;
+  padding: 9px 12px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: rgba(255,255,255,0.03);
+  color: var(--muted);
+  transition: transform .15s ease, background .15s ease, border-color .15s ease;
+}
+.pill:hover{
+  transform: translateY(-1px);
+  background: rgba(255,255,255,0.06);
+  border-color: rgba(255,255,255,0.18);
+  color: var(--text);
+}
+
+.container{
+  max-width: 1180px;
+  padding: 28px 22px 40px;
+  margin: 0 auto;
+}
+
+.hero{
+  display: grid;
+  grid-template-columns: 1.05fr 1.25fr;
+  gap: 26px;
+  align-items: start;
+  margin-top: 18px;
+}
+
+.left{
+  padding: 18px;
+  border-radius: var(--r);
+  background: rgba(255,255,255,0.03);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+}
+
+.avatarWrap{
+  width: 180px;
+  height: 180px;
+  border-radius: 28px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  background: rgba(255,255,255,0.03);
+  box-shadow: 0 10px 28px rgba(0,0,0,0.35);
+}
+
+.avatar{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.name{
+  font-size: 42px;
+  line-height: 1.06;
+  margin: 18px 0 8px;
+}
+
+.title{
+  font-size: 16px;
+  color: var(--muted);
+  margin-bottom: 14px;
+}
+
+.about{
+  margin: 0 0 16px;
+  color: rgba(255,255,255,0.78);
+  line-height: 1.55;
+  font-size: 15.5px;
+}
+
+.ctaRow{
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.btn{
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 11px 14px;
+  border-radius: 12px;
+  background: rgba(154,215,255,0.14);
+  border: 1px solid rgba(154,215,255,0.24);
+  color: var(--text);
+  transition: transform .15s ease, filter .15s ease;
+}
+.btn:hover{ transform: translateY(-1px); filter: brightness(1.08); }
+
+.right{
+  display: grid;
+  gap: 18px;
+}
+
+.panel{
+  padding: 16px;
+  border-radius: var(--r);
+  border: 1px solid var(--line);
+  background: rgba(255,255,255,0.03);
+  box-shadow: var(--shadow);
+}
+
+/* Allow grid items to shrink (prevents overflow) */
+.hero > * { min-width: 0; }
+
+/* Just in case */
+.right { min-width: 0; }
+.panel { min-width: 0; }
+.swiper { max-width: 100%; }
+
+
+.panelHeader{
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.panelTitle{
+  font-weight: 700;
+  letter-spacing: .2px;
+}
+
+.panelHint{
+  color: var(--muted);
+  font-size: 12.5px;
+}
+
+/* Swiper sizing */
+.swiper{
+  width: 100%;
+  padding-bottom: 30px;
+}
+
+.swiper-slide{
+  height: auto;
+}
+
+.card{
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  background: rgba(255,255,255,0.03);
+  transition: transform .15s ease, border-color .15s ease, background .15s ease;
+}
+.card:hover{
+  transform: translateY(-2px);
+  border-color: rgba(255,255,255,0.18);
+  background: rgba(255,255,255,0.05);
+}
+
+.mediaThumb{
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  display: block;
+}
+
+.caption{
+  padding: 10px 12px;
+  color: rgba(255,255,255,0.80);
+  font-size: 13.5px;
+  border-top: 1px solid rgba(255,255,255,0.06);
+}
+
+.playBadge{
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(to top, rgba(0,0,0,0.55), rgba(0,0,0,0.05));
+}
+.playIcon{
+  width: 54px;
+  height: 54px;
+  border-radius: 999px;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(255,255,255,0.28);
+  background: rgba(0,0,0,0.35);
+  backdrop-filter: blur(6px);
+  box-shadow: 0 10px 24px rgba(0,0,0,0.35);
+}
+
+.figure{
+  position: relative;
+  margin: 0;
+}
+
+.footer{
+  margin-top: 26px;
+  color: var(--muted);
+  font-size: 13px;
+  padding: 14px 4px 0;
+  border-top: 1px solid var(--line);
+}
+
+/* Swiper controls */
+.swiper-button-prev,
+.swiper-button-next{
+  color: rgba(255,255,255,0.85);
+}
+.swiper-pagination-bullet{
+  background: rgba(255,255,255,0.42);
+}
+.swiper-pagination-bullet-active{
+  background: rgba(154,215,255,0.90);
+}
+
+/* Modal */
+.modal{
+  position: fixed;
+  inset: 0;
+  display: none;
+  z-index: 50;
+}
+.modal[aria-hidden="false"]{ display: block; }
+
+.modalBackdrop{
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.65);
+  backdrop-filter: blur(6px);
+}
+
+.modalCard{
+  position: relative;
+  width: min(980px, calc(100% - 28px));
+  margin: 62px auto 0;
+  border-radius: 18px;
+  border: 1px solid rgba(255,255,255,0.14);
+  background: rgba(15,18,26,0.88);
+  box-shadow: 0 30px 90px rgba(0,0,0,0.55);
+  overflow: hidden;
+}
+
+.modalClose{
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 42px;
+  height: 42px;
+  border: 1px solid rgba(255,255,255,0.12);
+  background: rgba(255,255,255,0.06);
+  color: rgba(255,255,255,0.9);
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.modalBody{ padding: 56px 16px 16px; }
+
+.playerWrap{
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.12);
+  background: rgba(0,0,0,0.25);
+}
+
+.modalCaption{
+  margin-top: 10px;
+  color: rgba(255,255,255,0.78);
+  font-size: 13.5px;
+}
+
+/* Responsive */
+@media (max-width: 980px){
+  .hero{
+    grid-template-columns: 1fr;
+  }
+  .avatarWrap{
+    width: 150px;
+    height: 150px;
+  }
+  .name{
+    font-size: 34px;
+  }
+  .modalCard{
+    margin-top: 16px;
+  }
+}
+
+/* --- Fix: photo carousel should not grow infinitely --- */
+
+/* universal safety */
+img { max-width: 100%; }
+
+/* constrain photo slides visually */
+.photoSwiper .card {
+  height: 100%;
+}
+
+.photoSwiper .mediaThumb {
+  width: 100%;
+  height: 240px;          /* ключевое: фиксируем высоту */
+  object-fit: cover;
+  display: block;
+}
+
+/* slightly larger on wide screens */
+@media (min-width: 980px) {
+  .photoSwiper .mediaThumb {
+    height: 280px;
+  }
+}
+
+/* GLightbox: keep image inside viewport */
+.glightbox-container .gslide-image img {
+  max-width: 92vw !important;
+  max-height: 92vh !important;
+  width: auto !important;
+  height: auto !important;
+  object-fit: contain !important;
+}
+
+/* Force GLightbox media container to fit viewport */
+.glightbox-container .ginner-container {
+  width: 92vw !important;
+  height: 92vh !important;
+}
+
+.glightbox-container .gslide-media {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.glightbox-container .gslide-image img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: contain !important;
+}
+
+/* No scrollbars anywhere while GLightbox is open */
+body.glightbox-open { overflow: hidden !important; }
+html { overflow-x: hidden; }
+
+/* Kill internal scrollbars in the lightbox */
+.glightbox-container,
+.glightbox-container * {
+  scrollbar-width: none;              /* Firefox hide */
+}
+.glightbox-container::-webkit-scrollbar,
+.glightbox-container *::-webkit-scrollbar {
+  width: 0; height: 0;                /* Chrome/Safari hide */
+}
+
+.glightbox-container,
+.glightbox-container .gcontainer,
+.glightbox-container .ginner-container,
+.glightbox-container .gslide-media {
+  overflow: hidden !important;
+}
+
+/* Add safe padding so content doesn't touch edges (instead of 92vw/92vh) */
+.glightbox-container .ginner-container {
+  padding: 24px !important;
+  box-sizing: border-box !important;
+  width: 100vw !important;
+  height: 100vh !important;
+}
+
+/* Always scale image to fit the box (auto zoom-out/in) */
+.glightbox-container .gslide-image img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: contain !important;     /* вот это и есть “zoom-to-fit” */
+}
+
+.brand {
+  visibility: hidden;   /* элемент есть, но невидим */
+  pointer-events: none;
+}
